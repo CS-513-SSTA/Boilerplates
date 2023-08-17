@@ -23,6 +23,7 @@ int main(){
 		write(1,"Connected to the client\n",sizeof("Connected to the client\n"));
 		if(!fork()){
 			close(sd);
+			//Business Logic Goes here
 			write(nsd,"Hi Client, I'm the child process\n",sizeof("Hi Client, I'm the child process\n"));
 			exit(0);
 		}
